@@ -1,0 +1,13 @@
+#!/bin/bash
+HOST='opticaeco.com'
+US='u947744031.limpiezacsa.com'
+PA='CSA_ftp1'
+ftp  -i -p -v  -n  $HOST <<EOF
+user $US $PA 
+hash
+ascii
+cd admin/
+pwd
+put productos.php productos.php
+quit
+EOF
